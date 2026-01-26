@@ -1,0 +1,5 @@
+{
+  "python.defaultInterpreterPath": "/workspaces/data-engineering-zoomcamp-2026/week1-docker/pipeline/.venv/bin/python",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true
+}
