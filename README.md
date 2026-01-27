@@ -4,9 +4,13 @@
 -----
 
 
-# Homework
+# Week-1
 
-## Question 1. What's the version of pip in the python:3.13 image? (1 point)
+- 학습 내용 정리: https://www.notion.so/1-Docker-PostgreSQL-2f2a539517d180569fc2e4fe6c21fa12
+
+## Homework
+
+### Question 1. What's the version of pip in the python:3.13 image? (1 point)
 
 **Command:**
 ```bash
