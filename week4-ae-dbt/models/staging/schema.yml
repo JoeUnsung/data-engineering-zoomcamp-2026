@@ -1,0 +1,44 @@
+version: 2
+
+sources:
+  - name: raw_nyc_tripdata
+    database: "{{ env_var('DBT_BIGQUERY_PROJECT', 'playground-486505') }}"
+    schema: "{{ env_var('DBT_BIGQUERY_SOURCE_DATASET', 'raw_nyc_tripdata') }}"
+    tables:
+      - name: ext_green_taxi
+      - name: ext_yellow_taxi
+      - name: ext_fhv_taxi
+
+models:
+  - name: stg_green_tripdata
+    description: "Staged green taxi trip data"
+    columns:
+      - name: tripid
+        description: "Unique trip identifier"
+        tests:
+          - not_null:
+              severity: warn
+          - unique:
+              severity: warn
+
+  - name: stg_yellow_tripdata
+    description: "Staged yellow taxi trip data"
+    columns:
+      - name: tripid
+        description: "Unique trip identifier"
+        tests:
+          - not_null:
+              severity: warn
+          - unique:
+              severity: warn
+
+  - name: stg_fhv_tripdata
+    description: "Staged FHV trip data"
+    columns:
+      - name: tripid
+        description: "Unique trip identifier"
+        tests:
+          - not_null:
+              severity: warn
+          - unique:
+              severity: warn

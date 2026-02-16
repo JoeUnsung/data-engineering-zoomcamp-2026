@@ -1,0 +1,28 @@
+name: 'ny_taxi'
+version: '1.0.0'
+
+profile: 'default'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+dbt-cloud:
+  project-id: 70471823553703
+
+vars:
+  days_back: 30
+
+models:
+  ny_taxi:
+    staging:
+      +materialized: view
+    core:
+      +materialized: table

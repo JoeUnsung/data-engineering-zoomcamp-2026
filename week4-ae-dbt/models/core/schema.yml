@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dim_zones
+    description: "Taxi zone dimension table"
+
+  - name: fct_trips
+    description: "Fact table for green and yellow taxi trips"
+
+  - name: fct_fhv_trips
+    description: "Fact table for FHV trips"
+
+  - name: fct_taxi_trips_quarterly_revenue
+    description: "Quarterly revenue with YoY growth for Q5"
+
+  - name: fct_taxi_trips_monthly_fare_p95
+    description: "Monthly fare percentiles (p97/p95/p90) for Q6"
+
+  - name: fct_fhv_monthly_zone_traveltime_p90
+    description: "Monthly zone-level p90 travel time for FHV trips for Q7"
