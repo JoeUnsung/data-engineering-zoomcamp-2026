@@ -1,0 +1,15 @@
+name: nyc_taxi_pipeline
+schedule: "@daily"
+
+variables:
+  taxi_types:
+    type: array
+    items:
+      type: string
+    default: ["yellow", "green"]
+  start_date:
+    type: string
+    default: "2024-01-01"
+  end_date:
+    type: string
+    default: "2024-06-30"
