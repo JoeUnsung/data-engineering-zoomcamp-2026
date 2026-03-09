@@ -1,4 +1,8 @@
 *.parquet
+venv/
+**/data/
+_SUCCESS
+*.crc
 
 /.vscode
 
