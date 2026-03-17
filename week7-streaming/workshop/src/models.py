@@ -1,4 +1,5 @@
 import json
+import math
 from dataclasses import dataclass
 
 
@@ -20,7 +21,7 @@ def green_ride_from_row(row):
         lpep_dropoff_datetime=str(row['lpep_dropoff_datetime']),
         PULocationID=int(row['PULocationID']),
         DOLocationID=int(row['DOLocationID']),
-        passenger_count=float(row['passenger_count']) if row['passenger_count'] is not None else 0.0,
+        passenger_count=0.0 if row['passenger_count'] is None or (isinstance(row['passenger_count'], float) and math.isnan(row['passenger_count'])) else float(row['passenger_count']),
         trip_distance=float(row['trip_distance']),
         tip_amount=float(row['tip_amount']),
         total_amount=float(row['total_amount']),
